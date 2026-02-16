@@ -24,6 +24,7 @@ env:
 
 permissions:
   contents: read
+  packages: read
 
 jobs:
   build-test-image:
