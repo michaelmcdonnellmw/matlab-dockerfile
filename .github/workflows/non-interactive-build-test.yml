@@ -22,6 +22,9 @@ env:
   IMAGE_BASE_NAME: ghcr.io/${{ github.repository }}/matlab-non-interactive
   ALT_PATH: alternates/non-interactive
 
+permissions:
+  contents: read
+
 jobs:
   build-test-image:
     runs-on: ubuntu-latest
