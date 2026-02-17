@@ -22,12 +22,13 @@ env:
   IMAGE_BASE_NAME: matlab-installer
   ALT_PATH: alternates/matlab-installer
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   build-test-image:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     defaults:
       run:
         shell: bash

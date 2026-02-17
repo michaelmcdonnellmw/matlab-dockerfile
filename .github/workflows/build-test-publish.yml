@@ -22,13 +22,16 @@ env:
   IMAGE_BASE_NAME: ghcr.io/${{ github.repository }}/matlab
   LICENSE_FILE_PATH: ${{ github.workspace }}/license.lic
 
-permissions:
-  contents: read
-  packages: write
+permissions: {}
 
 jobs:
   build-test-push-image:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
     strategy:
       fail-fast: false
       matrix:

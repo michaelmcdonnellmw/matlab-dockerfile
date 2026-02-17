@@ -22,13 +22,15 @@ env:
   IMAGE_BASE_NAME: ghcr.io/${{ github.repository }}/matlab-non-interactive
   ALT_PATH: alternates/non-interactive
 
-permissions:
-  contents: read
-  packages: write
+permissions: {}
 
 jobs:
   build-test-push-image:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
     strategy:
       fail-fast: false
       matrix:
