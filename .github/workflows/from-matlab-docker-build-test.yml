@@ -23,14 +23,13 @@ env:
   ALT_PATH: alternates/building-on-matlab-docker-image
   LICENSE_FILE_PATH: ${{ github.workspace }}/license.lic
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   build-test-image:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
     strategy:
       fail-fast: false
       matrix:

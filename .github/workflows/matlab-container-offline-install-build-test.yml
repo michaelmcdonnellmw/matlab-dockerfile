@@ -26,14 +26,13 @@ env:
   MATLAB_PRODUCT_LIST: "MATLAB Symbolic_Math_Toolbox Deep_Learning_Toolbox_Model_for_ResNet-50_Network"
   LICENSE_FILE_PATH: ${{ github.workspace }}/license.lic
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   build-test-image:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
     strategy:
       fail-fast: false
       matrix:

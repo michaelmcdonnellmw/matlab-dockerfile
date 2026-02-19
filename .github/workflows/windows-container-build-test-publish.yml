@@ -21,14 +21,14 @@ env:
   IMAGE_BASE_NAME: ghcr.io/${{ github.repository }}/matlab-windows
   ALT_PATH: windows
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   windows-container-build-test-push-image:
     runs-on: windows-2022
 
     permissions:
-      contents: read
       packages: write
 
     strategy:
